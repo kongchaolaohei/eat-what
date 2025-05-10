@@ -4,13 +4,25 @@
 </head>
 <body>
     <button id="btn">抽奖</button>
-    <h1>结果 <span id="value"></span></h1>
-    <div>十万次概率分布</div>
-    <div id="res"></div>
+    <span id="value"></span>
+    <ul>
+      <li>麻辣拌</li>
+      <li>酸辣粉</li>
+      <li>烧饼</li>
+      <li>黄焖鸡</li>
+      <li>炒鸡</li>
+      <li>米村</li>
+      <li>麦当劳</li>
+      <li>牛肉面</li>
+      <li>拌粉</li>
+    </ul>
+    <!-- <div>十万次概率分布</div> -->
+    <!-- <div id="res"></div> -->
     <script>
         const map = [
           "麻辣拌",
-          "霸碗",
+          "酸辣粉",
+          "烧饼",
           "黄焖鸡",
           "炒鸡",
           "米村",
@@ -31,7 +43,26 @@
               obj[map[randomIndex]] = 1
             }
         }
-        document.getElementById("res").innerHTML = JSON.stringify(obj, null, 2)
+        // document.getElementById("res").innerHTML = JSON.stringify(obj, null, 2)
     </script>
+    <style>
+      * {
+        font-family: "微软雅黑";
+        font-size: calc( 20 / 1080 * 100vh );
+      }
+      #btn {
+        display: block;
+        width: 30%;
+        height: calc( 50 / 1080 * 100vh );
+        margin: calc( 20 / 1080 * 100vh ) auto;
+      }
+      #value {
+        display: block;
+        font-size: calc( 30 / 1080 * 100vh );
+        text-align: center;
+        color: red;
+        font-weight: bold;
+      }
+    </style>
 <body>
 </html>
